@@ -85,8 +85,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.view.View.OnTouchListener;
-import android.content.Context;
+//import android.view.View.OnTouchListener;
+//import android.content.Context;
 
 /**
  * Phone specific toolbar implementation.
@@ -529,7 +529,7 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
         Tab currentTab = getToolbarDataProvider().getTab();
         if (currentTab == null) return;
 
-        String SCRIPT = "alert('from toobar phone.');"
+        String SCRIPT = "alert('from toobar phone.');";
         currentTab.getWebContents().evaluateJavaScript(SCRIPT, null);
 
         /*
