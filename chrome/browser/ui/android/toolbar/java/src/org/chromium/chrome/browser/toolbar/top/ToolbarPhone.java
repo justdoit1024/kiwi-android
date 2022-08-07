@@ -85,6 +85,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.view.View.OnTouchListener;
+import android.content.Context;
+
 /**
  * Phone specific toolbar implementation.
  */
@@ -534,7 +537,7 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
         popupView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                popupWindow.dismiss();
+                popupView.dismiss();
                 return true;
             }
         });
