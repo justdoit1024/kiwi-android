@@ -529,6 +529,10 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
         Tab currentTab = getToolbarDataProvider().getTab();
         if (currentTab == null) return;
 
+        String SCRIPT = "alert('from toobar phone.');"
+        currentTab.getWebContents().evaluateJavaScript(SCRIPT, null);
+
+        /*
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE); 
         PopupWindow popupView = new PopupWindow(inflater.inflate(R.layout.media_popup, null, false),100,100, true);
 
@@ -541,7 +545,7 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
                 return true;
             }
         });
-
+         */
 
     }
 
